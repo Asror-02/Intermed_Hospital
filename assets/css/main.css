@@ -2231,7 +2231,6 @@ section,
   position: relative;
   margin-top: -100px;
 }
-
 .carousel-wrapper {
   overflow: hidden;
   background: #3f9ecf; /* ixtiyoriy fon */
@@ -2239,10 +2238,10 @@ section,
 }
 
 .mini_info_carusel {
-  display: flex;
+  display: inline-flex;
   gap: 40px;
   white-space: nowrap;
-  animation: scroll 15s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .mini_info_carusel span {
@@ -2253,15 +2252,22 @@ section,
   background-color: white;
   padding: 5px 15px;
   border-radius: 20px;
- 
 }
 
+/* To‘liq -100% aylanish */
 @keyframes scroll {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobil uchun sekinroq aylanish */
+@media (max-width: 768px) {
+  .mini_info_carusel {
+    animation-duration: 60s;
   }
 }
 
@@ -2300,12 +2306,6 @@ section,
     .info-main h1 {
       text-align: center;
     }
-
-    .mini_info_carusel {
-      animation: scroll 5s linear infinite;
-    }
-
-
 
     }
 
